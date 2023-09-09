@@ -1,0 +1,215 @@
+/* Reset geral */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  /* cores */
+  --tt-heading: #0C3440;
+  
+  --tt-label: #00453A;
+  --tt-input: #212529;
+  --ot-input: #02799D;
+  --bd-input: rgba(73, 80, 87, 0.3);
+  --tt-placeholder: rgba(73, 80, 87, 0.5);
+  --bg-input: #DCE2E9;
+  
+  --tt-button: #FFF;
+  --bg-button: #02799D;
+  --bg-button-hover: #01475c;
+  
+  --bg-error: #F03E3E;
+  --tt-error: #FFF;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #040924;
+  overflow: hidden;
+}
+
+body, input, button{
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+/* Centralizar o card no meio da tela */
+.container{
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card{
+  padding: 4.8rem 6.4rem 6.4rem;
+  max-width: 42.8rem;
+  margin-inline: auto; 
+  
+  background-color: #FFF;
+  border-radius: .6rem;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+}
+
+.title{
+  font-size: 3.2rem;
+  line-height: .4rem;
+  color: var(--tt-heading);
+}
+
+.container{
+  padding: 1.6rem;
+}
+
+form{
+  width: 30rem;
+}
+
+form h1{
+  margin-bottom: 4rem;
+}
+
+form label{
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--tt-label);
+  
+  margin-bottom: .8rem;
+  display: block;
+}
+
+form input{
+  width: 100%;
+  border: 1px solid var(--bd-input);
+  background-color: var(--bg-input);
+  padding: 1.6rem;
+  border-radius: .4rem;
+}
+
+form input:focus{
+  outline: 2px solid var(--ot-input);
+}
+
+form input::placeholder{
+  color: var(--tt-placeholder);
+}
+
+.input-wrapper + .input-wrapper{
+  margin-top: 1.6rem;
+}
+
+form button{
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+  
+  border-radius: .4rem;
+  border: none;
+  background-color: var(--bg-button);
+  color: var(--tt-button);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  font-weight: bold;
+  line-height: 2rem;
+
+  cursor: pointer;
+
+  transition: background .3s;
+}
+
+form button:hover{
+  background-color: var(--bg-button-hover);
+}
+
+/* Modal */
+.modal-wrapper.open{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper{
+  position: absolute; /* Sobrepor */
+  inset: 0; /* Equivalente a atribuir 0 para top,bottom,right e left */
+  background: rgba(0, 0, 0, 0.70);
+  
+  display: grid;
+  place-content: center; /* display:grid com o place content alinha ao centro mantendo suas propriedades */
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal{
+  position: relative; /* Para que o Absolute do botão X seja absoluto dentro da caixa em branco e não na página toda */
+}
+
+.modal button{
+  background: none;
+  border: none;
+  
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.modal button:hover{
+  transform: scale(1.2);
+}
+
+/* alert error */
+.alert-error.open{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error{
+  position: absolute;
+  background-color: var(--bg-error);
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  text-align: center;
+  color: var(--tt-error);
+  padding: .8rem 0;
+  font-weight: bold;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(-30px);
+  transition: transform .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 425px){
+  form{
+    width: 24rem;
+  }
+
+  .card{
+    padding: 4.8rem 4rem 6.4rem;
+  }
+
+}
