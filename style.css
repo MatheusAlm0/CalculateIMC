@@ -193,17 +193,12 @@ form button:hover{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 425px){
+  body{
+    overflow: hidden;
+    height: 1px;
+  }
+  
   form{
     width: 24rem;
   }
