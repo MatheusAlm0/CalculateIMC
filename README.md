@@ -22,5 +22,5 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 O Cálculo IMC tem como intuito exercitar o uso de lógica de programação, variáveis, eventos e callbacks. Além do uso de modularização no código de Js.
 
 
-- [Acesse o projeto finalizado, online](https://matheusalm0.github.io/calculo-imc/)
+- [Acesse o projeto finalizado, online](https://matheusalm0.github.io/CalculateIMC/)
 ---
